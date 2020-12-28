@@ -27,7 +27,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47e5714b-f1f6-4a23-b2b9-3e78da429c1d" name="Default Changelist" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +63,14 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\camil\WebstormProjects\ModelingWebApp" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Run Meteor" type="meteor-app-runner" factoryName="Meteor">
@@ -91,7 +99,7 @@
       <updated>1609166142207</updated>
       <workItem from="1609166172776" duration="2429000" />
       <workItem from="1609168669901" duration="802000" />
-      <workItem from="1609170017128" duration="644000" />
+      <workItem from="1609170017128" duration="1042000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1609167353783</created>

@@ -2,7 +2,7 @@ import assert from "assert";
 
 describe("hello", function () {
   it("package.json has correct name", async function () {
-    const { name } = await import("../../Veille/package.json");
+    const { name } = await import("../../ModelingWebApp/package.json");
     assert.strictEqual(name, "hello");
   });
 
