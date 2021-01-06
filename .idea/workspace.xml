@@ -26,14 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47e5714b-f1f6-4a23-b2b9-3e78da429c1d" name="Default Changelist" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/ModelingWebApp/imports/body.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModelingWebApp/imports/body.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModelingWebApp/imports/body.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModelingWebApp/client/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/ModelingWebApp/client/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModelingWebApp/client/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/ModelingWebApp/client/main.js" afterDir="false" />
-    </list>
+    <list default="true" id="47e5714b-f1f6-4a23-b2b9-3e78da429c1d" name="Default Changelist" comment="first commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +122,7 @@
       <workItem from="1609168669901" duration="802000" />
       <workItem from="1609170017128" duration="1778000" />
       <workItem from="1609766757757" duration="2610000" />
-      <workItem from="1609941791173" duration="2762000" />
+      <workItem from="1609941791173" duration="3527000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1609167353783</created>
