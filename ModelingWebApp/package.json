@@ -12,6 +12,7 @@
     "apollo-boost": "^0.4.9",
     "autolayout": "^0.7.0",
     "chai": "^4.2.0",
+    "diagram-vue": "^0.3.3",
     "graphql": "^15.4.0",
     "jquery": "^3.5.1",
     "meteor-node-stubs": "^1.0.1",
