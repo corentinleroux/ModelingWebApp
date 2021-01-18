@@ -5,9 +5,7 @@ import './body.html';
 
     Template.body.helpers({
         tasks() {
-
-            Tasks.insert({text: "Yes we did it", score: 1 });
-            console.log(Tasks.findOne({score: 1}));
+            console.log(Tasks.findOne({_id: "G8i87AAjJwRkwZyqP"}));
             return Tasks.find({});
         },
     });
