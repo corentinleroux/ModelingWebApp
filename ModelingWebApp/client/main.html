@@ -1,25 +1,54 @@
 <head>
-  <title>ModelingWebApp</title>
+  <title>Tuto</title>
 </head>
 
-<body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
-  {{> info}}
+<body>{{user.fullName}} 
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+
+
+
+
+
+
+
+
+
+
+<!--
+<body>
+  <div id="app">
+    <h1>Leaderboard</h1>
+    <p>{{> loginButtons}}</p>
+    {{> leaderboard}}
+  </div>
+</body>
+
+<template name="leaderboard">
+{{#if currentUser}}
+  {{> addPlayerForm}}
+  <ul>
+  {{#each player}}
+      <li class="player {{selectedClass}}">{{name}}: {{score}}</li>
+  {{/each}}
+  {{#if selectedPlayer}}
+      <li>Selected Player: {{selectedPlayer.name}}</li>
+      <li>
+          <button class="increment">Give 5 Points</button>
+          <button class="decrement">Take 5 Points</button>
+          <button class="remove">Remove Player</button>
+      </li>
+  {{/if}}
+  </ul>
+{{else}}
+  <p>You must be logged-in to see this content.</p>
+{{/if}}
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
+<template name="addPlayerForm">
+  <form>
+      <input type="text" name="playerName">
+      <input type="submit" value="Add Player">
+  </form>
 </template>
+-->
