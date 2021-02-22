@@ -3,40 +3,38 @@
 -->
 
 <template>
+  <div>
+       <div class="q-pa-md">
+    <div class="q-gutter-md row">
+
+    <h1>ModelingWebApp</h1>
+     <q-btn color="blue">
+          <router-link to="/register">Register</router-link>
+      </q-btn>
+       <q-btn color="blue" >
+           <router-link to="/uml">Uml</router-link>
+      </q-btn>
+       <q-btn color="blue" >
+           <router-link to="/paper">Paper</router-link>
+      </q-btn>
+        <q-btn color="blue" >
+           <router-link to="/classe">Classe</router-link>
+      </q-btn>
+       </div>
+  </div>
+   
     <div>
-        <h1>Home</h1>
-        <div id="app"></div>
+      <router-view></router-view>
     </div>
+  </div>
+  
 </template>
 
 <script>
-    export default {
-        mounted() {
-            let graph = new joint.dia.Graph;
-
-            let paper = new joint.dia.Paper({
-                el: $('#app'),
-                width: 600,
-                height: 200,
-                model: graph,
-                gridSize: 1,
-            });
-
-            let rect = new joint.shapes.basic.Rect({
-                position: { x: 100, y: 30 },
-                size: { width: 100, height: 30 },
-                attrs: { rect: { fill: 'blue' }, text: { text: 'my box', fill: 'white' } }
-            });
-
-            let rect2 = rect.clone();
-            rect2.translate(300);
-
-            let link = new joint.dia.Link({
-                source: { id: rect.id },
-                target: { id: rect2.id }
-            });
-
-            graph.addCells([rect, rect2, link]);
-        }
-    }
+export default {
+  
+}
 </script>
+
+<style>
+</style>
