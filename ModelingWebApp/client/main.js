@@ -1,8 +1,15 @@
+/************************
+ *         RAB
+ ************************/
+
 import Vue from 'vue';
 import App from './App.vue';
 import './main.html';
 import { Template } from 'meteor/templating';
 import User from '../imports/classes/User';
+import router from './routes';
+
+import Quasar from 'quasar';
 
 /*window.$ = require('jquery');
 window.joint = require('jointjs');
@@ -16,8 +23,11 @@ Template.body.helpers({
     }
 })
 /*
+
 Meteor.startup(() => {
+    Vue.use(Quasar, {});
     new Vue({
+        router,
         el: '#app',
         ...App,
     });
