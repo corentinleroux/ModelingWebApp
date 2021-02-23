@@ -26,7 +26,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47e5714b-f1f6-4a23-b2b9-3e78da429c1d" name="Default Changelist" comment="first commit" />
+    <list default="true" id="47e5714b-f1f6-4a23-b2b9-3e78da429c1d" name="Default Changelist" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelingWebApp/imports/body.js" beforeDir="false" afterPath="$PROJECT_DIR$/ModelingWebApp/imports/body.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,8 +39,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -65,7 +68,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js.meteor.library.cached" value="$PROJECT_DIR$/.meteor&#10;/Users/user/Documents/GitHub/ModelingWebApp/ModelingWebApp/.meteor" />
+    <property name="js.meteor.library.cached" value="$PROJECT_DIR$/ModelingWebApp/.meteor" />
     <property name="js.meteor.library.was.enabled" value="true" />
     <property name="js.meteor.project" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -123,6 +126,11 @@
       <workItem from="1609170017128" duration="1778000" />
       <workItem from="1609766757757" duration="2610000" />
       <workItem from="1609941791173" duration="3527000" />
+      <workItem from="1609949110470" duration="1552000" />
+      <workItem from="1609963736022" duration="2307000" />
+      <workItem from="1610546897535" duration="1109000" />
+      <workItem from="1610559978394" duration="10824000" />
+      <workItem from="1610624422428" duration="1079000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1609167353783</created>
