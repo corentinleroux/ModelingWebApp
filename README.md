@@ -2,4 +2,9 @@
 Projet M1 MIAGE - Veille Technologique
 
 
-Pour éxecuter le projet, rendez vous dans ModelingWebApp/ModelingWebApp et éxecutez : `meteor run`
+Pour éxecuter le projet, suivez les instructions suivantes : 
+
+1. `cd ModelingWebAppQuasar`
+2. `npm install`
+3. `quasar dev`
+
