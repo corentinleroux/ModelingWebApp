@@ -3,7 +3,7 @@ import assert from "assert";
 describe("ModelingWebApp", function () {
   it("package.json has correct name", async function () {
     const { name } = await import("../package.json");
-    assert.strictEqual(name, "ModelingWebApp");
+    assert.strictEqual(name, "modelingwebapp");
   });
 
   if (Meteor.isClient) {

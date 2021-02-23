@@ -9,16 +9,15 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
+    "@sinonjs/formatio": "^6.0.0",
     "apollo-boost": "^0.4.9",
     "autolayout": "^0.7.0",
-    "chai": "^4.2.0",
     "graphql": "^15.4.0",
     "jointjs": "^3.3.1",
     "jquery": "^3.5.1",
     "meteor-node-stubs": "^1.0.1",
     "ngx-indexed-db": "^6.1.2",
     "quasar": "^1.15.2",
-    "sinon": "^9.2.2",
     "vue": "^2.6.12",
     "vue-apollo": "^3.0.5",
     "vue-meteor-tracker": "^2.0.0-beta.5"
@@ -33,6 +32,7 @@
   "devDependencies": {
     "@meteorjs/eslint-config-meteor": "^1.0.5",
     "babel-eslint": "^10.1.0",
+    "chai": "^4.3.0",
     "cypress": "^6.2.1",
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -41,6 +41,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-meteor": "^7.2.2",
     "eslint-plugin-react": "^7.22.0",
+    "sinon": "^9.2.4",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.0"
   }
