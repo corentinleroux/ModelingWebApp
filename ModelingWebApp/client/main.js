@@ -11,18 +11,17 @@ import router from './routes';
 
 import Quasar from 'quasar';
 
-/*window.$ = require('jquery');
+window.$ = require('jquery');
 window.joint = require('jointjs');
-PlayersList = new Mongo.Collection('players');*/
+/*PlayersList = new Mongo.Collection('players');*/
 window.User = User;
-
+/*
 Template.body.helpers({
 
     user() {
         return User.findOne();
     }
-})
-/*
+})*/
 
 Meteor.startup(() => {
     Vue.use(Quasar, {});
@@ -33,7 +32,7 @@ Meteor.startup(() => {
     });
 });
 
-
+/*
         Template.leaderboard.helpers({
             'player': function(){
                 var currentUserId = Meteor.userId();
