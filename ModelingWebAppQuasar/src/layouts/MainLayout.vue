@@ -1,21 +1,21 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHh Lpr fFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar :class="$q.dark.isActive ? 'bg-black text-white' : 'bg-primary text-white'">
         <q-btn
           flat
           dense
           round
-          icon="menu"
+          :icon="mdiMenu"
           aria-label="Menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
 
         <q-toolbar-title>
-          Quasar App
+          ModelingWebApp
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <q-btn flat round @click="$q.dark.toggle()" :icon="$q.dark.isActive ? mdiBrightness2 : mdiBrightness5" />
       </q-toolbar>
     </q-header>
 
@@ -23,14 +23,12 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
-      content-class="bg-grey-1"
     >
       <q-list>
         <q-item-label
           header
-          class="text-grey-8"
         >
-          Essential Links
+          Menu
         </q-item-label>
         <EssentialLink
           v-for="link in essentialLinks"
@@ -46,64 +44,76 @@
   </q-layout>
 </template>
 
-<script lang="ts">
+<script>
 import EssentialLink from 'components/EssentialLink.vue'
+import { version } from '@quasar/extras/package.json'
+
+import {
+  mdiMenu,
+  mdiBrightness2,
+  mdiBrightness5,
+  mdiSchool,
+  mdiAccountCircle,
+  mdiDraw,
+  mdiDrawingBox,
+  mdiGithub
+} from '@quasar/extras/mdi-v5'
 
 const linksData = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
+    title: 'Inscription',
+    caption:'Créer un compte',
+    icon: mdiSchool,
+    link: '/inscription'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
+    title: 'Connexion',
+    icon: mdiGithub,
     link: 'https://chat.quasar.dev'
   },
   {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
+    title: 'Compte',
+    caption: 'Accéder à mon compte',
+    icon: mdiAccountCircle,
     link: 'https://forum.quasar.dev'
   },
   {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
+    title: 'Github',
+    caption:'Accéder au github',
+    icon: mdiGithub,
+    link: 'https://github.com/corentinleroux/ModelingWebApp'
+  },
+  {
+    title: 'Dashboard',
+    caption: 'Accéder à mon dashboard',
+    icon: mdiDrawingBox,
     link: 'https://twitter.quasar.dev'
   },
   {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
+    title: 'Drawboard',
+    caption: 'Créer un diagrammer',
+    icon: mdiDraw,
     link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
   }
-];
+]
 
-import { defineComponent, ref } from '@vue/composition-api';
-
-export default defineComponent({
+export default {
   name: 'MainLayout',
   components: { EssentialLink },
-  setup() {
-    const leftDrawerOpen = ref(false);
-    const essentialLinks = ref(linksData);
-
-    return {leftDrawerOpen, essentialLinks}
+  data () {
+    return {
+      version,
+      mdiMenu,
+      mdiBrightness2,
+      mdiBrightness5,
+      mdiSchool,
+      mdiDrawingBox,
+      mdiAccountCircle,
+      mdiDraw,
+      mdiGithub,
+      leftDrawerOpen: false,
+      essentialLinks: linksData
+    }
   }
-});
+}
 </script>

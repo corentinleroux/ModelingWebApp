@@ -13,6 +13,7 @@
     "@quasar/extras": "^1.0.0",
     "@vue/composition-api": "^0.6.4",
     "core-js": "^3.6.5",
+    "firebase": "^8.2.9",
     "quasar": "^1.0.0",
     "vue-i18n": "^8.0.0"
   },
