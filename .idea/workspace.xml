@@ -27,8 +27,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47e5714b-f1f6-4a23-b2b9-3e78da429c1d" name="Default Changelist" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/src/components/Diagram.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/src/components/Editor.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/src/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/src/lib/AskModal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/src/lib/EditLinkModal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/src/lib/EditNodeModal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/src/lib/InputModal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/src/lib/Link.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/src/lib/Node.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/src/lib/SettingsModal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/src/mouseLocation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModelingWebApp/imports/body.js" beforeDir="false" afterPath="$PROJECT_DIR$/ModelingWebApp/imports/body.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelingWebAppQuasar/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelingWebAppQuasar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelingWebAppQuasar/quasar.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/quasar.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelingWebAppQuasar/src/layouts/MainLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/src/layouts/MainLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelingWebAppQuasar/src/pages/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/src/pages/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelingWebAppQuasar/src/router/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ModelingWebAppQuasar/src/router/routes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +58,7 @@
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -71,19 +89,26 @@
     <property name="js.meteor.library.cached" value="$PROJECT_DIR$/ModelingWebApp/.meteor" />
     <property name="js.meteor.library.was.enabled" value="true" />
     <property name="js.meteor.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ModelingWebAppQuasar/src" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ModelingWebAppQuasar/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\camil\WebstormProjects\ModelingWebApp" />
     </key>
@@ -131,6 +156,8 @@
       <workItem from="1610546897535" duration="1109000" />
       <workItem from="1610559978394" duration="10824000" />
       <workItem from="1610624422428" duration="1079000" />
+      <workItem from="1614279333858" duration="81000" />
+      <workItem from="1614347572012" duration="4986000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1609167353783</created>

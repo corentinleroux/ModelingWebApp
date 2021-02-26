@@ -91,9 +91,9 @@ const linksData = [
   },
   {
     title: 'Drawboard',
-    caption: 'Créer un diagrammer',
+    caption: 'Créer un diagramme',
     icon: mdiDraw,
-    link: 'https://facebook.quasar.dev'
+    link: '/#/editor'
   }
 ]
 
