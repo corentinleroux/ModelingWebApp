@@ -1,6 +1,4 @@
 import { RouteConfig } from 'vue-router';
-import Editor from 'components/Editor.vue';
-import MainLayout from 'layouts/MainLayout.vue';
 const routes: RouteConfig[] = [
   {
     path: '/',
@@ -10,7 +8,7 @@ const routes: RouteConfig[] = [
     ]
   },
   {
-    path: "/editor",
+    path: '/editor',
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('components/Editor.vue') }
