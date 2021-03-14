@@ -1,4 +1,15 @@
+import { register as registerFlow } from 'topology-flow-diagram'
+import { register as registerActivity } from 'topology-activity-diagram'
+import { register as registerSequence } from 'topology-sequence-diagram'
 
+import { register as registerClass } from '../class-diagram/index'
+
+export function canvasRegister() {
+  registerFlow()
+  registerActivity()
+  registerSequence()
+  registerClass()
+}
 
 export const Tools = [
   {
