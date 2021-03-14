@@ -44,10 +44,10 @@
 </template>
 
 <script>
+import { Topology, Node, Line } from '@topology/core';
 import { DiagramEditor } from 'diagram-vue';
 import 'diagram-vue/dist/diagram.css';
-import Tools from '../services/canvas';
-import { Topology, Node, Line } from 'topology-core';
+import { Tools, canvasRegister } from '../services/canvas';
 
 export default {
   name: 'HelloWorld',
@@ -76,6 +76,7 @@ export default {
         expand: false,
         locked: false
       },
+      
       menu: [
         {
           header: true,

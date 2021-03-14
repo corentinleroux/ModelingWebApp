@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "@topology/core": "^0.4.13",
     "@vue/composition-api": "^0.6.4",
     "core-js": "^3.6.5",
     "diagram-vue": "0.3.2",
