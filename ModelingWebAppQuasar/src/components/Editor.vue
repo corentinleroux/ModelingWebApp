@@ -43,6 +43,7 @@ import 'diagram-vue/dist/diagram.css';
 export default {
   name: 'HelloWorld',
   components: {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     DiagramEditor
   },
   data() {
@@ -58,7 +59,3 @@ export default {
   }
 };
 </script>
-<style scoped>
-#editor {
-}
-</style>
