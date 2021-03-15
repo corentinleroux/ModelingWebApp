@@ -1,7 +1,12 @@
 <template>
   <div class="q-pa-md">
-      <q-layout view="lhh LpR lff" container style="height: 100vh" class="shadow-2 rounded-borders">
-        <q-drawer
+    <q-layout
+      view="lhh LpR lff"
+      container
+      style="height: 100vh"
+      class="shadow-2 rounded-borders"
+    >
+      <q-drawer
         side="left"
         v-model="drawerRight"
         bordered
@@ -10,25 +15,43 @@
         content-class="bg-grey-3"
       >
         <q-scroll-area class="fit">
-            <h6> Diagramme de Classe </h6>
+          <div class="test">
+            <h6>Diagramme de Classe</h6>
+            <svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
+              <!-- Simple rect element -->
+              <rect x="0" y="0" width="50" height="50" />
+
+              <!-- Rounded corner rect element -->
+              <rect x="120" y="0" width="50" height="50" rx="15" ry="15" />
+            </svg>
             <hr>
-            <h6> Diagramme de Séquence </h6>
-            <hr>
-            <h6> Diagramme BPMN </h6>
+            <h6>Diagramme de Séquence</h6>
+            <svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
+            <marker id="full-arrowhead" viewBox="0 0 10 10" refX="0" refY="5" markerUnits="strokeWidth" markerWidth="4" markerHeight="3" orient="auto">
+                  <path d="M 0 0 L 10 5 L 0 10 z" stroke="none" fill="black"/>
+                </marker>
+                </svg>
+            <hr />
+            <h6>Diagramme BPMN</h6>
+          </div>
         </q-scroll-area>
       </q-drawer>
       <q-page-container>
         <q-page>
-
-      <q-btn flat @click="drawerRight = !drawerRight" round dense icon="menu" />
-    <div id="editor">
-      <DiagramEditor v-model="graph" />
-    </div>
-</q-page>
+          <q-btn
+            flat
+            @click="drawerRight = !drawerRight"
+            round
+            dense
+            icon="menu"
+          />
+          <div id="editor">
+            <DiagramEditor v-model="graph" />
+          </div>
+        </q-page>
       </q-page-container>
-        </q-layout>
+    </q-layout>
   </div>
-
 </template>
 
 <script>
@@ -68,10 +91,12 @@ export default {
 };
 </script>
 
-
 <style>
-
-h3, h2 {
-  font-size : 14px ; 
+h3,
+h2 {
+  font-size: 14px;
+}
+.test {
+  padding-left: 10px !important ;
 }
 </style>
