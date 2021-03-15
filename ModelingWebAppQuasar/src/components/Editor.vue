@@ -1,3 +1,6 @@
+/* eslint-disable vue/valid-v-model */
+<script src="go-debug.js"></script>
+
 <template>
   <div class="q-pa-md">
     <q-layout
@@ -16,21 +19,70 @@
       >
         <q-scroll-area class="fit">
           <div class="test">
-            <h6>Diagramme de Classe</h6>
-            <svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
-              <!-- Simple rect element -->
-              <rect x="0" y="0" width="50" height="50" />
+            <div class="q-pa-md">
+              <div class="cursor-pointer">
+                {{ nickname }}
+                <q-popup-edit v-model="nickname">
+                  <template
+                    v-slot="{
+                      initialValue,
+                      value,
+                      emitValue,
+                      validate,
+                      set,
+                      cancel
+                    }"
+                  >
+                    <q-input
+                      autofocus
+                      dense
+                      :value="nickname"
+                      hint="Changez l'attribut"
+                      :rules="[]"
+                      @input="emitValue"
+                    >
+                      <template v-slot:after>
+                        <q-btn
+                          flat
+                          dense
+                          color="negative"
+                          icon="cancel"
+                          @click.stop="cancel"
+                        />
+                        <q-btn
+                          flat
+                          dense
+                          color="positive"
+                          icon="check_circle"
+                          @click.stop="set"
+                          :disable="
+                            validate(value) === false || initialValue === value
+                          "
+                        />
+                      </template>
+                    </q-input>
+                  </template>
+                </q-popup-edit>
+              </div>
+            </div>
 
+            <h6>Diagramme de Classe</h6>
+
+            <svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg" ref="box" class="box">
+          
               <!-- Rounded corner rect element -->
-              <rect x="120" y="0" width="50" height="50" rx="15" ry="15" />
+              <rect width="50" height="50" rx="15" ry="15" 
+              class="square"
+      fill="red"
+      :x="square.x"
+      :y="square.y"
+      :style="cursor"
+      @mousedown="drag"
+      @mouseup="drop"
+      />
             </svg>
-            <hr>
+            <hr />
             <h6>Diagramme de Séquence</h6>
-            <svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
-            <marker id="full-arrowhead" viewBox="0 0 10 10" refX="0" refY="5" markerUnits="strokeWidth" markerWidth="4" markerHeight="3" orient="auto">
-                  <path d="M 0 0 L 10 5 L 0 10 z" stroke="none" fill="black"/>
-                </marker>
-                </svg>
             <hr />
             <h6>Diagramme BPMN</h6>
           </div>
@@ -57,7 +109,6 @@
 <script>
 import { DiagramEditor } from 'diagram-vue';
 import 'diagram-vue/dist/diagram.css';
-import Tools from 'src/services/canvas.ts';
 
 export default {
   name: 'HelloWorld',
@@ -67,10 +118,16 @@ export default {
   },
   data() {
     return {
+      square: {
+        x: 0,
+        y: 0,
+      },
+      dragOffsetX: null,
+      dragOffsetY: null,
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      tools: Tools,
       drawerLeft: false,
       drawerRight: true,
+      nickname: 'Attribut',
       graph: {
         width: window.innerWidth,
         height: window.innerHeight,
@@ -87,6 +144,27 @@ export default {
         locked: false
       }
     };
+  }
+  ,
+  computed: {
+    cursor() {
+      return `cursor: ${this.dragOffsetX ? 'grabbing' : 'grab'}`
+    },
+  },
+  methods: {
+    drag({offsetX, offsetY}) {
+      this.dragOffsetX = offsetX - this.square.x;
+      this.dragOffsetY = offsetY - this.square.y;
+      this.$refs.box.addEventListener('mousemove', this.move)
+    },
+    drop() {
+      this.dragOffsetX = this.dragOffsetY = null;
+      this.$refs.box.removeEventListener('mousemove', this.move)
+    },
+    move({offsetX, offsetY}) {
+      this.square.x = offsetX - this.dragOffsetX;
+      this.square.y = offsetY - this.dragOffsetY;
+    }
   }
 };
 </script>
