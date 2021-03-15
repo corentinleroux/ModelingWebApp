@@ -68,7 +68,7 @@
 
             <h6>Diagramme de Classe</h6>
 
-            <svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg" ref="box" class="box">
+            <svg viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" ref="box" class="box">
           
               <!-- Rounded corner rect element -->
               <rect width="50" height="50" rx="15" ry="15" 
@@ -176,5 +176,9 @@ h2 {
 }
 .test {
   padding-left: 10px !important ;
+}
+h6 {
+  margin-bottom : 5px ; 
+  margin-top : 5px ; 
 }
 </style>
