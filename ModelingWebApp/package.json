@@ -17,7 +17,7 @@
     "jquery": "^3.5.1",
     "meteor-node-stubs": "^1.0.1",
     "ngx-indexed-db": "^6.1.2",
-    "quasar": "^1.15.2",
+    "quasar": "^1.15.4",
     "sinon": "^9.2.2",
     "vue": "^2.6.12",
     "vue-apollo": "^3.0.5",

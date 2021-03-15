@@ -2,39 +2,44 @@
           RAB
 -->
 
-<template>
-  <div>
-       <div class="q-pa-md">
-    <div class="q-gutter-md row">
 
-    <h1>ModelingWebApp</h1>
-     <q-btn color="blue">
-          <router-link to="/register">Register</router-link>
-      </q-btn>
-       <q-btn color="blue" >
-           <router-link to="/uml">Uml</router-link>
-      </q-btn>
-       <q-btn color="blue" >
-           <router-link to="/paper">Paper</router-link>
-      </q-btn>
-        <q-btn color="blue" >
-           <router-link to="/classe">Classe</router-link>
-      </q-btn>
-       </div>
+<template>
+  <div id="app">
+    <InputForm v-on:addNode="addNode" v-on:checkLink="checkLink" />
+    <JointDia v-bind:nodeName="nodeName" v-bind:linkMode="linkMode" />
   </div>
-   
-    <div>
-      <router-view></router-view>
-    </div>
-  </div>
-  
 </template>
 
 <script>
+import JointDia from './components/JointDia'
+import InputForm from './components/InputForm'
+
 export default {
-  
+  name: 'app',
+  components: {
+    JointDia,
+    InputForm
+  },
+  data() {
+    return {
+      nodeName: '',
+      linkMode: false
+    }
+  },
+  methods: {
+    addNode(name) {
+      this.nodeName = name
+    },
+    checkLink(checkLink) {
+      this.linkMode = checkLink
+    }
+  }
 }
 </script>
 
 <style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 90%;
+}
 </style>
