@@ -53,7 +53,6 @@ import {
   mdiBrightness2,
   mdiBrightness5,
   mdiSchool,
-  mdiAccountKey,
   mdiAccountCircle,
   mdiDraw,
   mdiDrawingBox,
@@ -65,18 +64,18 @@ const linksData = [
     title: 'Inscription',
     caption:'Créer un compte',
     icon: mdiSchool,
-    link: '/#/inscription'
+    link: '/inscription'
   },
   {
     title: 'Connexion',
-    icon: mdiAccountKey,
-    link: '/#/signin'
+    icon: mdiGithub,
+    link: 'https://chat.quasar.dev'
   },
   {
     title: 'Compte',
     caption: 'Accéder à mon compte',
     icon: mdiAccountCircle,
-    link: '/#/account'
+    link: 'https://forum.quasar.dev'
   },
   {
     title: 'Github',

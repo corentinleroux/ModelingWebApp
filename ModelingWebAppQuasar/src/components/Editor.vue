@@ -5,28 +5,16 @@
         side="left"
         v-model="drawerRight"
         bordered
-        :width="400"
+        :width="200"
         :breakpoint="500"
         content-class="bg-grey-3"
       >
         <q-scroll-area class="fit">
-          <div class="q-pa-sm">
-           <div class="tools">
-      <div v-for="(item, index) in tools" :key="index">
-        <div class="title">{{ item.group }}</div>
-        <div class="buttons">
-          <a
-            v-for="(btn, i) in item.children"
-            :key="i"
-            :title="btn.name"
-            :draggable="btn.data"
-          >
-            <i :class="`iconfont ${btn.icon}`"></i>
-          </a>
-        </div>
-      </div>
-          </div>
-          </div>
+            <h6> Diagramme de Classe </h6>
+            <hr>
+            <h6> Diagramme de Séquence </h6>
+            <hr>
+            <h6> Diagramme BPMN </h6>
         </q-scroll-area>
       </q-drawer>
       <q-page-container>
@@ -44,10 +32,9 @@
 </template>
 
 <script>
-import { Topology, Node, Line } from '@topology/core';
 import { DiagramEditor } from 'diagram-vue';
 import 'diagram-vue/dist/diagram.css';
-import { Tools, canvasRegister } from '../services/canvas';
+import Tools from 'src/services/canvas.ts';
 
 export default {
   name: 'HelloWorld',
@@ -75,32 +62,16 @@ export default {
         multi: false,
         expand: false,
         locked: false
-      },
-      
-      menu: [
-        {
-          header: true,
-          title: 'Main Navigation',
-          hiddenOnCollapse: true
-        },
-        {
-          href: '/',
-          title: 'Dashboard',
-          icon: 'fa fa-user'
-        },
-        {
-          href: '/charts',
-          title: 'Charts',
-          icon: 'fa fa-chart-area',
-          child: [
-            {
-              href: '/charts/sublink',
-              title: 'Sub Link'
-            }
-          ]
-        }
-      ]
+      }
     };
   }
 };
 </script>
+
+
+<style>
+
+h3, h2 {
+  font-size : 14px ; 
+}
+</style>

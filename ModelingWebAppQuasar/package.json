@@ -10,13 +10,11 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@firebase/auth-types": "^0.10.2",
     "@quasar/extras": "^1.0.0",
-    "@topology/core": "^0.4.13",
     "@vue/composition-api": "^0.6.4",
     "core-js": "^3.6.5",
     "diagram-vue": "0.3.2",
-    "firebase": "^8.3.0",
+    "firebase": "^8.2.9",
     "quasar": "^1.0.0",
     "topology": "^0.2.1",
     "topology-activity-diagram": "^0.0.6",
