@@ -12,7 +12,8 @@
         />
 
         <q-toolbar-title>
-          ModelingWebApp
+          <q-btn flat to="./" no-caps icon="home" label="ModelingWebApp" class="qbuttontitle"/>
+          
         </q-toolbar-title>
 <q-btn v-if="loggedIn" @click="logoutUser" :class="$q.dark.isActive ? 'bg-primary text-white' : 'bg-white text-blue'" color="primary" icon-right="logout" label="Se deconnecter"  class="logoutbutton"></q-btn>
         <q-btn flat round @click="$q.dark.toggle()" :icon="$q.dark.isActive ? mdiBrightness2 : mdiBrightness5" />
@@ -136,5 +137,8 @@ export default {
 
 body.body--dark {
   background: #000
+}
+#q-app > div > header > div.q-toolbar.row.no-wrap.items-center.bg-primary.text-white > div > a > span.q-focus-helper{
+  border : none  ; 
 }
 </style>
