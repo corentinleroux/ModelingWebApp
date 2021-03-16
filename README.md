@@ -6,7 +6,15 @@
 # ModelingWebApp - Projet S2-PRO3
 
 Projet réalisé dans le cadre du Master 1 Informatique MIAGE à l'Université Paris-1 Panthéon-Sorbonne. 
-Groupe constitué de : MEURIC Camille, DOGLOBE Gérard, ABIZMIL Raphael, BENOUZGHAR Mehdi, PIOTROWSKI Paul et LE ROUX Corentin.
+
+Groupe constitué de : 
+
+- MEURIC Camille
+- DOGLOBE Gérard
+- ABIZMIL Raphael
+- BENOUZGHAR Mehdi
+- PIOTROWSKI Paul
+- LE ROUX Corentin
 
 ## Technologies
 
