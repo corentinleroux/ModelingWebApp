@@ -45,11 +45,7 @@ Prenons le cas où votre préfixe est http://localhost:8080/#/, les pages seront
 - http://localhost:8080/#/editor2 (Stack 2 : JointJS)
 - http://localhost:8080/#/login (Connexion)
 
-
-
 ## Demo
-
-
 
 Une démonstration est disponible sur Youtube à l'adresse suivante :  [Youtube - Demonstration](https://youtu.be/Gebm9YGn4Lg)
 
