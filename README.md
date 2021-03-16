@@ -7,6 +7,8 @@
 
 Projet réalisé dans le cadre du Master 1 Informatique MIAGE à l'Université Paris-1 Panthéon-Sorbonne. 
 
+Lien vers la version website du repository : https://corentinleroux.github.io/ModelingWebApp/
+
 Groupe constitué de : 
 
 - MEURIC Camille
