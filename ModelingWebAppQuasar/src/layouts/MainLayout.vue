@@ -65,36 +65,36 @@ const linksData = [
     title: 'Inscription',
     caption:'Créer un compte',
     icon: mdiSchool,
-    link: '/#/inscription'
+    to: '/inscription'
   },
   {
     title: 'Connexion',
     icon: mdiGithub,
-    link: '/#/login'
+    to: '/login'
   },
   {
     title: 'Compte',
     caption: 'Accéder à mon compte',
     icon: mdiAccountCircle,
-    link: '/#/account'
+    to: '/account'
   },
   {
     title: 'Github',
     caption:'Accéder au github',
     icon: mdiGithub,
-    link: 'https://github.com/corentinleroux/ModelingWebApp'
+    to: 'https://github.com/corentinleroux/ModelingWebApp'
   },
   {
     title: 'Drawboard Stack 1',
     caption: 'Accéder au Stack 1 : Diagram-vue',
     icon: mdiDrawingBox,
-    link: '/#/editor'
+    to: '/editor'
   },
   {
     title: 'Drawboard Stack 2',
     caption: 'Accéder au Stack 2 : Jointjs',
     icon: mdiDraw,
-    link: '/#/editor2'
+    to: '/editor2'
   }
 ]
 
