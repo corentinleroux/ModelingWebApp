@@ -64,18 +64,18 @@ const linksData = [
     title: 'Inscription',
     caption:'Créer un compte',
     icon: mdiSchool,
-    link: '/inscription'
+    link: '/#/inscription'
   },
   {
     title: 'Connexion',
     icon: mdiGithub,
-    link: 'https://chat.quasar.dev'
+    link: '/#/login'
   },
   {
     title: 'Compte',
     caption: 'Accéder à mon compte',
     icon: mdiAccountCircle,
-    link: 'https://forum.quasar.dev'
+    link: '/#/account'
   },
   {
     title: 'Github',
@@ -84,16 +84,16 @@ const linksData = [
     link: 'https://github.com/corentinleroux/ModelingWebApp'
   },
   {
-    title: 'Dashboard',
-    caption: 'Accéder à mon dashboard',
+    title: 'Drawboard Stack 1',
+    caption: 'Accéder au Stack 1 : Diagram-vue',
     icon: mdiDrawingBox,
-    link: 'https://twitter.quasar.dev'
+    link: '/#/editor'
   },
   {
-    title: 'Drawboard',
-    caption: 'Créer un diagramme',
+    title: 'Drawboard Stack 2',
+    caption: 'Accéder au Stack 2 : Jointjs',
     icon: mdiDraw,
-    link: '/#/editor'
+    link: '/#/editor2'
   }
 ]
 
