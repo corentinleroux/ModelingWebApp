@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr fFf">
     <q-header elevated>
-      <q-toolbar :class="$q.dark.isActive ? 'bg-black text-white' : 'bg-primary text-white'">
+      <q-toolbar :class="$q.dark.isActive ? 'bg-black text-white' : 'bg-primary text-black'">
         <q-btn
           flat
           dense
@@ -14,7 +14,7 @@
         <q-toolbar-title>
           ModelingWebApp
         </q-toolbar-title>
-
+<q-btn v-if="loggedIn" @click="logoutUser" :class="$q.dark.isActive ? 'bg-primary text-white' : 'bg-white text-blue'" color="primary" icon-right="logout" label="Se deconnecter"  class="logoutbutton"></q-btn>
         <q-btn flat round @click="$q.dark.toggle()" :icon="$q.dark.isActive ? mdiBrightness2 : mdiBrightness5" />
       </q-toolbar>
     </q-header>
@@ -47,6 +47,7 @@
 <script>
 import EssentialLink from 'components/EssentialLink.vue'
 import { version } from '@quasar/extras/package.json'
+import { mapActions, mapState } from 'Vuex'
 
 import {
   mdiMenu,
@@ -103,6 +104,7 @@ export default {
   data () {
     return {
       version,
+      formData: {email: 'test@gmail.fr', password: 'testtest'},
       mdiMenu,
       mdiBrightness2,
       mdiBrightness5,
@@ -114,6 +116,25 @@ export default {
       leftDrawerOpen: false,
       essentialLinks: linksData
     }
+  },
+  methods:{
+    ...mapActions('auth', ['loginUser','logoutUser']),
+    submitForm(){
+      console.log('fonction de connexion');
+      this.loginUser(this.formData)
+    }
+  },
+  computed: {
+    ...mapState('auth', ['loggedIn'])
   }
 }
 </script>
+<style scoped>
+.logoutbutton {
+  margin-right : 10px ;
+}
+
+body.body--dark {
+  background: #000
+}
+</style>
