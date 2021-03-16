@@ -7,6 +7,7 @@ const routes: RouteConfig[] = [
       { path: '', component: () => import('pages/Index.vue') },
       { path: '/editor', component: () => import('components/Editor.vue') },
       { path: '/editor2', component: () => import('components/Editor2.vue') },
+      { path: '/signup', component: () => import('components/register.vue') },
       { path: '/login', component: () => import('components/Login.vue') }
 
     ]

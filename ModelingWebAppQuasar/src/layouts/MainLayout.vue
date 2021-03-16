@@ -56,6 +56,7 @@ import {
   mdiBrightness5,
   mdiSchool,
   mdiAccountCircle,
+  mdiAccountCheck,
   mdiDraw,
   mdiDrawingBox,
   mdiGithub
@@ -66,11 +67,11 @@ const linksData = [
     title: 'Inscription',
     caption:'Créer un compte',
     icon: mdiSchool,
-    to: '/inscription'
+    to: '/signup'
   },
   {
     title: 'Connexion',
-    icon: mdiGithub,
+    icon: mdiAccountCheck ,
     to: '/login'
   },
   {
@@ -111,6 +112,7 @@ export default {
       mdiBrightness5,
       mdiSchool,
       mdiDrawingBox,
+      mdiAccountCheck,
       mdiAccountCircle,
       mdiDraw,
       mdiGithub,
