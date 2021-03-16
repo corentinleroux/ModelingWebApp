@@ -10,6 +10,7 @@
 </template>
 
 <script>
+
   export default {
     name: 'InputForm',
     data() {
