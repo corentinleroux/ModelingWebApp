@@ -1,4 +1,3 @@
-/* eslint-disable vue/valid-v-model */
 <script src="go-debug.js"></script>
 
 <template>
@@ -8,6 +7,7 @@
       container
       style="height: 100vh"
       class="shadow-2 rounded-borders"
+      
     >
       <q-drawer
         side="left"
@@ -71,7 +71,10 @@
             <svg viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" ref="box" class="box">
           
               <!-- Rounded corner rect element -->
-              <rect width="50" height="50" rx="15" ry="15" 
+              
+     <defs>
+    <g id="Port">
+      <rect width="50" height="50" rx="15" ry="15" 
               class="square"
       fill="red"
       :x="square.x"
@@ -80,6 +83,11 @@
       @mousedown="drag"
       @mouseup="drop"
       />
+    </g>
+  </defs>
+    <use x=+50 href="#Port" />
+    
+
             </svg>
             <hr />
             <h6>Diagramme de Séquence</h6>
