@@ -34,7 +34,7 @@ Groupe constitué de :
         
 ## Lancer le projet 
 
-Lancez `quasar dev` pour éxecuter le projet. 
+Lancez `quasar dev` pour exécuter le projet. 
 
 ## Les différentes pages
 
