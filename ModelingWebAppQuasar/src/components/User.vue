@@ -11,8 +11,13 @@
       <q-card-section vertical align="left">
         <form @submit.prevent="submitFormMail">
           <h6>Adresse mail :</h6>
-          <q-input        type="email" v-model="emailinput"     id="mailinput"
- :value="emailuser"> </q-input>
+          <q-input
+            type="email"
+            v-model="emailinput"
+            id="mailinput"
+            :value="emailuser"
+          >
+          </q-input>
           <q-btn
             color="primary"
             class="full-width"
@@ -27,24 +32,20 @@
         </p>
       </q-card-section>
       <q-card-section vertical align="left">
-                  <form @submit.prevent="submitFormUsername">
-
-        <h6>Nom d'affichage :</h6>
-        <q-input v-model="userinput" >{{ username }} </q-input>
-        <q-btn
-          color="secondary"
-          class="full-width"
-          label="Mettre à jour le nom d'affichage"
-          type="submit"
-        />
+        <form @submit.prevent="submitFormUsername">
+          <h6>Nom d'affichage :</h6>
+          <q-input v-model="userinput">{{ username }} </q-input>
+          <q-btn
+            color="secondary"
+            class="full-width"
+            label="Mettre à jour le nom d'affichage"
+            type="submit"
+          />
         </form>
       </q-card-section>
       <q-card-section vertical align="left">
         <p>
           <b> ID du compte :</b> <span>{{ ID }} </span>
-        </p>
-        <p>
-          test : <span>{{ displayedmessage }} </span>
         </p>
       </q-card-section>
     </q-card>
@@ -58,7 +59,6 @@ import '@firebase/auth';
 
 var user = firebase.auth().currentUser;
 var name, email, photoUrl, uid, emailVerified;
-var message = "" ; 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     console.log('user connecté');
@@ -76,36 +76,38 @@ export default {
       ID: uid,
       username: name,
       verified: emailVerified,
-      displayedmessage: message,
-      emailinput : email,
-      userinput : name
+      emailinput: email,
+      userinput: name
     };
   },
   methods: {
     ...mapActions('auth', ['loginUser', 'logoutUser']),
-    submitFormUsername(){
-        user.updateProfile({
-  displayName: this.userinput
-}).then(function() {
-  // Update successful.
-}).catch(function(error) {
-  // An error happened.
-});
+    submitFormUsername() {
+              console.log('bouton appuyé : Changement de username');
+var user = firebase.auth().currentUser;
+
+      user
+        .updateProfile({
+          displayName: this.userinput
+        })
+        .then(function() {
+          console.log('réussite : Changement de username');
+        })
+        .catch(function(error) {
+          console.log('echec : Changement de username');
+        });
     },
     submitFormMail() {
-      console.log('bouton appuyé');
+        var user = firebase.auth().currentUser;
+
+      console.log('bouton appuyé : Changement de mail');
       user
         .updateEmail(this.emailinput)
         .then(function() {
-          console.log('réussite');
-
-          message = 'Changement réalisé avec succès.';
+          console.log('réussite : Changement de mail');
         })
         .catch(function(error) {
-          console.log('echec');
-          message = 'Une erreur est survenue';
-            displayedmessage : message ; 
-
+          console.log('echec : Changement de mail');
         });
     }
   },
