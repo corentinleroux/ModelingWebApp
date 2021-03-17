@@ -9,17 +9,17 @@
       </q-card-section>
 
       <q-card-section vertical align="left">
-          <form @submit.prevent="submitFormMail">
-        <h6>e-mail :</h6>
-        <q-input :value="emailuser"> </q-input>
-        <q-btn
-          color="primary"
-          class="full-width"
-          label="Mettre à jour l'email"
-          type="submit"
-        />
-                  </form>
-
+        <form @submit.prevent="submitFormMail">
+          <h6>e-mail :</h6>
+          <q-input        type="email" v-model="emailinput"     id="mailinput"
+ :value="emailuser"> </q-input>
+          <q-btn
+            color="primary"
+            class="full-width"
+            label="Mettre à jour l'email"
+            type="submit"
+          />
+        </form>
       </q-card-section>
       <q-card-section vertical align="left">
         <p>
@@ -27,18 +27,21 @@
         </p>
       </q-card-section>
       <q-card-section vertical align="left">
-          <h6>Nom d'affichage :</h6>
-          <q-input >{{ username }} </q-input>
-          <q-btn
-            color="secondary"
-            class="full-width"
-            label="Mettre à jour le nom d'affichage"
-            type="submit"
-          />
+        <h6>Nom d'affichage :</h6>
+        <q-input>{{ username }} </q-input>
+        <q-btn
+          color="secondary"
+          class="full-width"
+          label="Mettre à jour le nom d'affichage"
+          type="submit"
+        />
       </q-card-section>
       <q-card-section vertical align="left">
         <p>
           <b> ID du compte :</b> <span>{{ ID }} </span>
+        </p>
+        <p>
+          test : <span>{{ displayedmessage }} </span>
         </p>
       </q-card-section>
     </q-card>
@@ -52,6 +55,7 @@ import '@firebase/auth';
 
 var user = firebase.auth().currentUser;
 var name, email, photoUrl, uid, emailVerified;
+var message;
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     console.log('user connecté');
@@ -68,19 +72,24 @@ export default {
       emailuser: email,
       ID: uid,
       username: name,
-      verified: emailVerified
+      verified: emailVerified,
+      displayedmessage: message,
+      emailinput : email 
     };
   },
   methods: {
     ...mapActions('auth', ['loginUser', 'logoutUser']),
     submitFormMail() {
+      console.log('bouton appuyé');
       user
-        .updateEmail()
+        .updateEmail(this.emailinput)
         .then(function() {
-          // Update successful.
+          console.log('réussite');
+          message = 'Changement réalisé avec succès.';
         })
         .catch(function(error) {
-          // An error happened.
+          console.log('echec');
+          message = 'Une erreur est survenue';
         });
     }
   },
