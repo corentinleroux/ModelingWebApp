@@ -9,10 +9,10 @@
       </q-card-section>
 
       <q-card-actions vertical align="center">
-        <form @submit.prevent="submitForm">
-          <q-input v-model="formData.email" label="Adresse mail"></q-input>
+        <form @submit.prevent="submitFormRegister">
+          <q-input v-model="emailinput" label="Adresse mail"></q-input>
           <q-input
-            v-model="formData.password"
+            v-model="password"
             type="password"
             label="Mot de passe"
           ></q-input>
@@ -25,24 +25,43 @@
             >S'inscrire</q-btn
           >
         </form>
+        <p>{{showmessage}}</p>
       </q-card-actions>
     </q-card>
   </q-page>
 </template>
 <script>
 import { mapActions, mapState } from 'Vuex';
+import { firebase } from '@firebase/app';
+import '@firebase/firestore';
+import '@firebase/auth';
 
+var message = "" ; 
 export default {
   data() {
     return {
-      formData: { email: 'test@gmail.fr', password: 'testtest' }
+      email: '',
+      password: '',
+      showmessage: message,
+      emailinput:'',
     };
   },
   methods: {
     ...mapActions('auth', ['loginUser', 'logoutUser']),
-    submitForm() {
-      console.log('fonction de connexion');
-      this.loginUser(this.formData);
+    submitFormRegister() {
+      firebase.auth().createUserWithEmailAndPassword(this.emailinput, this.password)
+  .then((userCredential) => {
+    var user = userCredential.user;
+    message = "Création réusssite.";
+    console.log("Création réusssite.")
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    message = errorMessage ; 
+    console.log(errorMessage);
+
+  });
     }
   },
   computed: {

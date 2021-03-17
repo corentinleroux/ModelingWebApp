@@ -10,7 +10,7 @@
 
       <q-card-section vertical align="left">
         <form @submit.prevent="submitFormMail">
-          <h6>e-mail :</h6>
+          <h6>Adresse mail :</h6>
           <q-input        type="email" v-model="emailinput"     id="mailinput"
  :value="emailuser"> </q-input>
           <q-btn
