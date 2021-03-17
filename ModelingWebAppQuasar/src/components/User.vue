@@ -27,14 +27,17 @@
         </p>
       </q-card-section>
       <q-card-section vertical align="left">
+                  <form @submit.prevent="submitFormUsername">
+
         <h6>Nom d'affichage :</h6>
-        <q-input>{{ username }} </q-input>
+        <q-input v-model="userinput" >{{ username }} </q-input>
         <q-btn
           color="secondary"
           class="full-width"
           label="Mettre à jour le nom d'affichage"
           type="submit"
         />
+        </form>
       </q-card-section>
       <q-card-section vertical align="left">
         <p>
@@ -55,7 +58,7 @@ import '@firebase/auth';
 
 var user = firebase.auth().currentUser;
 var name, email, photoUrl, uid, emailVerified;
-var message;
+var message = "" ; 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     console.log('user connecté');
@@ -74,22 +77,35 @@ export default {
       username: name,
       verified: emailVerified,
       displayedmessage: message,
-      emailinput : email 
+      emailinput : email,
+      userinput : name
     };
   },
   methods: {
     ...mapActions('auth', ['loginUser', 'logoutUser']),
+    submitFormUsername(){
+        user.updateProfile({
+  displayName: this.userinput
+}).then(function() {
+  // Update successful.
+}).catch(function(error) {
+  // An error happened.
+});
+    },
     submitFormMail() {
       console.log('bouton appuyé');
       user
         .updateEmail(this.emailinput)
         .then(function() {
           console.log('réussite');
+
           message = 'Changement réalisé avec succès.';
         })
         .catch(function(error) {
           console.log('echec');
           message = 'Une erreur est survenue';
+            displayedmessage : message ; 
+
         });
     }
   },
