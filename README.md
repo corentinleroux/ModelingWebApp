@@ -53,7 +53,8 @@ Prenons le cas où votre préfixe est http://localhost:8080/#/, les pages seront
 - http://localhost:8080/#/editor (Stack 1 : diagram-vue)
 - http://localhost:8080/#/editor2 (Stack 2 : JointJS)
 - http://localhost:8080/#/login (Connexion)
-
+- http://localhost:8080/#/signup (Inscription)
+- http://localhost:8080/#/account (Page du Compte)
 
 
 ## Demo
