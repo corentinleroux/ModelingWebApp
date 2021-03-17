@@ -8,21 +8,37 @@
         <div class="text-subtitle2">Informations du compte</div>
       </q-card-section>
 
-     <q-card-section vertical align="left">
-        <h6> e-mail : </h6>
-        <q-input :value="emailuser" > </q-input>
-    </q-card-section>
-    <q-card-section vertical align="left">
-        <h6> Etat validité mail :</h6> 
-          <p>{{ verified }} </p>
-    </q-card-section>
-     <q-card-section vertical align="left">
-          <h6>Nom d'affichage : </h6>
-           <q-input>{{ username }} </q-input>
-  </q-card-section>
-  <q-card-section vertical align="left">
+      <q-card-section vertical align="left">
+          <form @submit.prevent="submitFormMail">
+        <h6>e-mail :</h6>
+        <q-input :value="emailuser"> </q-input>
+        <q-btn
+          color="primary"
+          class="full-width"
+          label="Mettre à jour l'email"
+          type="submit"
+        />
+                  </form>
+
+      </q-card-section>
+      <q-card-section vertical align="left">
         <p>
-          ID du compte : <span>{{ ID }} </span>
+          <b>Etat validité mail :</b><span> {{ verified }} </span>
+        </p>
+      </q-card-section>
+      <q-card-section vertical align="left">
+          <h6>Nom d'affichage :</h6>
+          <q-input >{{ username }} </q-input>
+          <q-btn
+            color="secondary"
+            class="full-width"
+            label="Mettre à jour le nom d'affichage"
+            type="submit"
+          />
+      </q-card-section>
+      <q-card-section vertical align="left">
+        <p>
+          <b> ID du compte :</b> <span>{{ ID }} </span>
         </p>
       </q-card-section>
     </q-card>
@@ -46,7 +62,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-
 export default {
   data() {
     return {
@@ -58,9 +73,15 @@ export default {
   },
   methods: {
     ...mapActions('auth', ['loginUser', 'logoutUser']),
-    submitForm() {
-      console.log('fonction de connexion');
-      this.loginUser(this.formData);
+    submitFormMail() {
+      user
+        .updateEmail()
+        .then(function() {
+          // Update successful.
+        })
+        .catch(function(error) {
+          // An error happened.
+        });
     }
   },
   computed: {
@@ -70,7 +91,7 @@ export default {
 </script>
 <style scoped>
 .my-card {
-  height: 60vh;
+  height: 80vh;
   width: 40vw;
 }
 
@@ -79,12 +100,15 @@ export default {
 }
 
 h6 {
-    margin-top : 0px ; 
-    margin-bottom : 0px; 
-    padding-bottom : 0px 
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
-
+.q-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 .bg-image {
   background: linear-gradient(120deg, #3b5998, #ffffff);
   background-repeat: repeat;
