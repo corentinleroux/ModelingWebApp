@@ -1,14 +1,14 @@
 import assert from "assert";
 import { expect } from 'chai';
 
-describe("Aloo", function () {
+describe("App name", function () {
   it("test 1", async function () {
     const { name } = await import("../package.json");
     assert.strictEqual(name, "modelingwebapp");
   });
 
   if (Meteor.isClient) {
-    it("test 2", function () {
+    it("#indefined failure chai", function () {
         expect("ali").to.be.a(undefined);
       //assert.strictEqual(Meteor.isServer, false);
     });
