@@ -20,7 +20,9 @@
         text-align: center;
     }
 </style>-->
-
+<head>
+    <script type="text/javascript" src="C:\workspace\ModelingWebApp\ModelingWebApp\node_modules\autolayout\AutoLayout.js"></script>
+</head>
 <template>
     <div>
         <h1>Home</h1>
@@ -35,8 +37,8 @@
 
             let paper = new joint.dia.Paper({
                 el: $('#app'),
-                width: 600,
-                height: 200,
+                width: 6000,
+                height: 2000,
                 model: graph,
                 gridSize: 1,
             });
@@ -49,13 +51,20 @@
 
             let rect2 = rect.clone();
             rect2.translate(300);
+            let rect3 = rect.clone();
+            rect3.translate(500);
 
             let link = new joint.dia.Link({
                 source: { id: rect.id },
                 target: { id: rect2.id }
             });
-
-            graph.addCells([rect, rect2, link]);
+            let link2 = new joint.dia.Link({
+                source: { id: rect2.id },
+                target: { id: rect3.id }
+            });
+            
+            graph.addCells([rect, rect2, rect3, link, link2]);
+           
         }
     }
 </script>
