@@ -29,6 +29,7 @@ Groupe constitué de :
 ![JointJS](https://img.shields.io/badge/JointJS-3.3.1-yellow)  ![DiagramVue](https://img.shields.io/badge/DiagramVue-0.3.2-yellow) 
 ## Installation 
 
+- Si vous ne possèdez pas Quasar CLI, faites :  `yarn global add @quasar/cli` ou  `npm install -g @quasar/cli`
 - `gh repo clone corentinleroux/ModelingWebApp`
 - `git checkout Quasar`
 - Rendez vous au dossier et faites `cd ModelingWebAppQuasar` 
