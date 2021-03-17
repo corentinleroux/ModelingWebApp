@@ -38,6 +38,13 @@ Groupe constitué de :
 
 Lancez `quasar dev` pour exécuter le projet. 
 
+
+## Ajouter des diagrammes au Stack 1 
+
+Vous pouvez ajouter du SVG directement avec le bouton Import/Export en faisant un Copier/Coller dans la fenêtre qui s'ouvre (supprimer le contenu déjà existant) : 
+
+```{"width":1440,"height":821,"background":"#f0f0f0","nodes":[{"id":"1784033378de6952","content":{"text":"Voiture","color":"white"},"width":200,"height":200,"stroke":"black","strokeWeight":"2","shape":null,"point":{"x":475,"y":146.84479306446727}},{"id":"17840338c5dcbfe0","content":{"text":"Roue","color":"grey"},"width":200,"height":200,"stroke":"black","strokeWeight":"2","shape":null,"point":{"x":10,"y":178.98595854289357}},{"id":"17840339def65187","content":{"text":"Moteur","color":"grey"},"width":200,"height":200,"stroke":"black","strokeWeight":"2","shape":null,"point":{"x":828,"y":238.0500754855987}}],"links":[{"id":"1784033aedde6686","source":"17840339def65187","destination":"1784033378de6952","point":{"x":727,"y":191.447434275033},"color":"black","shape":"straight","pattern":"solid","arrow":"dest"},{"id":"1784033e4ffc5448","source":"17840338c5dcbfe0","destination":"1784033378de6952","point":{"x":242.5,"y":162.91537580368043},"color":"black","shape":"straight","pattern":"dash","arrow":"src"}]}```
+
 ## Les différentes pages
 
 Prenons le cas où votre préfixe est http://localhost:8080/#/, les pages seront : 
