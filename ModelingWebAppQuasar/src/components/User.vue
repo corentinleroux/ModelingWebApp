@@ -8,9 +8,23 @@
         <div class="text-subtitle2">Informations du compte</div>
       </q-card-section>
 
-      <q-card-actions vertical align="center">
-        <p>e-mail : <span>{{emailuser}} </span></p>
-      </q-card-actions>
+     <q-card-section vertical align="left">
+        <h6> e-mail : </h6>
+        <q-input :value="emailuser" > </q-input>
+    </q-card-section>
+    <q-card-section vertical align="left">
+        <h6> Etat validité mail :</h6> 
+          <p>{{ verified }} </p>
+    </q-card-section>
+     <q-card-section vertical align="left">
+          <h6>Nom d'affichage : </h6>
+           <q-input>{{ username }} </q-input>
+  </q-card-section>
+  <q-card-section vertical align="left">
+        <p>
+          ID du compte : <span>{{ ID }} </span>
+        </p>
+      </q-card-section>
     </q-card>
   </q-page>
 </template>
@@ -26,23 +40,20 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     console.log('user connecté');
     name = user.displayName;
-    email = user.email,
-    emailVerified = user.emailVerified;
+    (email = user.email), (emailVerified = user.emailVerified);
     uid = user.uid;
-  }
-  else {
-      name = "";
-    email = "",
-    emailVerified = "";
-    uid = "";
+  } else {
   }
 });
+
 
 export default {
   data() {
     return {
       emailuser: email,
-      uid
+      ID: uid,
+      username: name,
+      verified: emailVerified
     };
   },
   methods: {
@@ -59,13 +70,20 @@ export default {
 </script>
 <style scoped>
 .my-card {
-  height: 40vh;
-  width: 20vw;
+  height: 60vh;
+  width: 40vw;
 }
 
 #subbutton {
   margin-top: 30px;
 }
+
+h6 {
+    margin-top : 0px ; 
+    margin-bottom : 0px; 
+    padding-bottom : 0px 
+}
+
 
 .bg-image {
   background: linear-gradient(120deg, #3b5998, #ffffff);
